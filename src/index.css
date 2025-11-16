@@ -1,25 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;600&family=League+Spartan:wght@400;500;600&display=swap');
 
 :root {
-  /* Primary color */
-  --primary-color: #3b82f6;
-  /* blue-500 */
+  /* Color Palette */
+  --color-white: #FFFFFF;
+  --color-space-black: #070724;
+  --color-space-gray-dark: #38384F;
+  --color-space-gray: #838391;
+  --color-blue: #419EBB;
+  --color-gold: #EDA249;
+  --color-purple: #6f2ed6;
+  --color-orange: #D14C32;
+  --color-red: #D83A34;
+  --color-rust: #CD5120;
+  --color-teal: #1ec2a4;
+  --color-bright-blue: #2d68f0;
+
+  /* Primary color - using blue as primary */
+  --primary-color: var(--color-blue);
 
   /* Typography */
   --font-antonio: 'Antonio', sans-serif;
   --font-spartan: 'League Spartan', sans-serif;
 
+  /* Font Variables */
+  --font-h1: 500 5rem/1.288 var(--font-antonio);
+  --font-h2: 500 2.5rem/1.3 var(--font-antonio);
+  --font-h3: 700 0.75rem/2.083 var(--font-spartan);
+  --font-h4: 700 0.6875rem/2.273 var(--font-spartan);
+  --font-body: 400 0.875rem/1.786 var(--font-spartan);
+
   /* Base styles */
-  font-family: var(--font-spartan);
-  line-height: 1.5;
-  font-weight: 400;
-  color: #1e293b;
-  /* slate-800 */
-  background-color: #ffffff;
+  font: var(--font-body);
+  color: var(--color-space-gray);
+  background-color: var(--color-space-black);
+
+  /* Base styles */
+  margin: 0;
+  min-height: 100vh;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1 {
+  font: var(--font-h1);
+  letter-spacing: 0;
+  color: var(--color-white);
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  font: var(--font-h2);
+  letter-spacing: -0.09375rem;
+  /* -1.5px */
+  color: var(--color-white);
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+}
+
+h3 {
+  font: var(--font-h3);
+  letter-spacing: 0.1625rem;
+  /* 2.6px */
+  margin: 0 0 0.5rem 0;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+h4 {
+  font: var(--font-h4);
+  letter-spacing: 0.0625rem;
+  /* 1px */
+  margin: 0 0 0.5rem 0;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0 0 1rem 0;
+  color: var(--color-space-gray);
 }
 
 /* Dark mode */
