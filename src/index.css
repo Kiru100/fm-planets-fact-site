@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;600&family=League+Spartan:wght@400;500;600&display=swap');
+
+:root {
+  /* Color Palette */
+  --color-white: #FFFFFF;
+  --color-space-black: #070724;
+  --color-space-gray-dark: #38384F;
+  --color-space-gray: #838391;
+  --color-blue: #419EBB;
+  --color-gold: #EDA249;
+  --color-purple: #6f2ed6;
+  --color-orange: #D14C32;
+  --color-red: #D83A34;
+  --color-rust: #CD5120;
+  --color-teal: #1ec2a4;
+  --color-bright-blue: #2d68f0;
+
+  /* Primary color - using blue as primary */
+  --primary-color: var(--color-blue);
+
+  /* Typography */
+  --font-antonio: 'Antonio', sans-serif;
+  --font-spartan: 'League Spartan', sans-serif;
+
+  /* Font Variables */
+  --font-h1: 500 5rem/1.288 var(--font-antonio);
+  --font-h2: 500 2.5rem/1.3 var(--font-antonio);
+  --font-h3: 700 0.75rem/2.083 var(--font-spartan);
+  --font-h4: 700 0.6875rem/2.273 var(--font-spartan);
+  --font-body: 400 0.875rem/1.786 var(--font-spartan);
+
+  /* Base styles */
+  font: var(--font-body);
+  color: var(--color-space-gray);
+  background-color: var(--color-space-black);
+
+  /* Base styles */
+  margin: 0;
+  min-height: 100vh;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1 {
+  font: var(--font-h1);
+  letter-spacing: 0;
+  color: var(--color-white);
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  font: var(--font-h2);
+  letter-spacing: -0.09375rem;
+  /* -1.5px */
+  color: var(--color-white);
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+}
+
+h3 {
+  font: var(--font-h3);
+  letter-spacing: 0.1625rem;
+  /* 2.6px */
+  margin: 0 0 0.5rem 0;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+h4 {
+  font: var(--font-h4);
+  letter-spacing: 0.0625rem;
+  /* 1px */
+  margin: 0 0 0.5rem 0;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0 0 1rem 0;
+  color: var(--color-space-gray);
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f8fafc;
+    /* slate-50 */
+    background-color: #0f172a;
+    /* slate-900 */
+  }
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #60a5fa;
+  /* Slightly lighter blue on hover */
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-antonio);
+  color: inherit;
+  line-height: 1.1;
+  margin: 0.67em 0;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2.5em;
+  letter-spacing: -1px;
+}
+
+/* Buttons */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #2563eb;
+  /* Slightly darker blue on hover */
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px solid rgba(59, 130, 246, 0.5);
+  outline-offset: 2px;
+}
+
+/* Apply Spartan font to all elements by default */
+* {
+  font-family: var(--font-spartan);
+}
