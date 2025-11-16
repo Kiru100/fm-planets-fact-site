@@ -1,8 +1,7 @@
-export default function App() {
+import { Headers } from "./components/Headers";
 
-  return (
-    <div>
-      <h1>Planets</h1>
-    </div>
-  )
+export default function App() {
+	return (
+		<Headers/>
+	)
 }
