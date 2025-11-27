@@ -1,22 +1,19 @@
 import { MdArrowForwardIos } from "react-icons/md";
-import clsx from "clsx";
 
-type EarthSelectionItemProps = {
+type PlanetSelectionItemProps = {
     planet_color: string;
     name: string;
 };
 
-export const EarthSelectionItem = ({
+export const PlanetSelectionItem = ({
     planet_color,
     name
-}: EarthSelectionItemProps) => {
+}: PlanetSelectionItemProps) => {
 
     return (
         <div className="flex flex-row items-center justify-between">
             <div className="flex flex-row items-center">
-                <div 
-                    className={clsx(`w-5 h-5 rounded-full`, `bg-${planet_color}`)}
-                ></div>
+                <div className="w-5 h-5 rounded-full" style={{ backgroundColor: planet_color }}></div>
                 <p className="ml-6 text-white var(--font-spartan) text-[25px] leading-[1.5625rem] font-bold">{name}</p>
             </div>
             <div><MdArrowForwardIos height={8} width={4}/></div>

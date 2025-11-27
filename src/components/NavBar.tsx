@@ -1,8 +1,9 @@
-import { EarthSelectionItem } from "./EarthSelectionItem";
+import type { PlanetType } from "../types/planet.type";
+import { PlanetSelectionItem } from "./EarthSelectionItem";
 
-const planet_list = [
+const planet_list: PlanetType[] = [
     {
-        planet_color: "light-blue",
+        planet_color: "var(--color-light-blue)",
         name: "Mercury"
     },
     {
@@ -10,27 +11,27 @@ const planet_list = [
         name: "Venus"
     },
     {
-        planet_color: "green",
+        planet_color: "var(--color-teal)",
         name: "Earth"
     },
     {
-        planet_color: "red",
+        planet_color: "var(--color-red)",
         name: "Mars"
     },
     {
-        planet_color: "yellow",
+        planet_color: "var(--color-gold)",
         name: "Jupiter"
     },
     {
-        planet_color: "orange",
+        planet_color: "var(--color-orange)",
         name: "Saturn"
     },
     {
-        planet_color: "purple",
+        planet_color: "var(--color-purple)",
         name: "Uranus"
     },
     {
-        planet_color: "blue",
+        planet_color: "#497EFA",
         name: "Neptune"
     }
 ];
@@ -39,9 +40,9 @@ export const NavBar = () => {
 	return (
 		<nav className="flex flex-row justify-between mx-6 my-4">
             <ul className="w-full">
-                {planet_list.map((planet) => (
+                {planet_list.map((planet: PlanetType) => (
                     <li className="w-full my-5">
-                        <EarthSelectionItem planet_color={planet.planet_color} name={planet.name} />
+                        <PlanetSelectionItem planet_color={planet.planet_color} name={planet.name} />
                     </li>
                 ))}
             </ul>
