@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;600&family=League+Spartan:wght@400;500;600&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  /* Color Palette */
+@theme {
   --color-white: #FFFFFF;
   --color-space-black: #070724;
   --color-space-gray-dark: #38384F;
@@ -17,6 +14,13 @@
   --color-rust: #CD5120;
   --color-teal: #1ec2a4;
   --color-bright-blue: #2d68f0;
+  --color-light-blue: #DEF4FC;
+  --color-app-yelow: #F7CC7F;
+}
+
+:root {
+  /* Color Palette */
+
 
   /* Primary color - using blue as primary */
   --primary-color: var(--color-blue);
@@ -51,6 +55,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  margin: 0;
+}
+
 /* Typography */
 h1 {
   font: var(--font-h1);
@@ -79,16 +87,9 @@ h3 {
 h4 {
   font: var(--font-h4);
   letter-spacing: 0.0625rem;
-  /* 1px */
   color: var(--color-white);
   text-transform: uppercase;
   margin: 0;
-}
-
-p {
-  color: var(--color-space-gray);
-  margin: 0;
-  font: var(--font-body);
 }
 
 /* Dark mode */
